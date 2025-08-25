@@ -1,7 +1,6 @@
-// main.dart
-
+/* AUTOR: MPVV */
+import 'package:flutter_application_1/screens/tabs_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/screens/plants_book_screen.dart'; 
 
 void main() {
   runApp(const MyApp());
@@ -10,11 +9,16 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: PlantsBook(),
+      title: 'Material App',
+      initialRoute: 'tabs',
+      routes: {
+        'tabs': (context) => const TabsScreen(),
+      },
     );
   }
 }
